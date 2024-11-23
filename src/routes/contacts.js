@@ -2,6 +2,7 @@ import express from 'express';
 import Contact from '../models/contactModel.js';
 const router = express.Router();
 
+// GET /contacts - отримання всіх контактів
 router.get('/', async (req, res) => {
   try {
     const contacts = await Contact.find();
@@ -15,6 +16,7 @@ router.get('/', async (req, res) => {
   }
 });
 
+// GET /contacts/:contactId - отримання контакту по ID
 router.get('/:contactId', async (req, res) => {
   try {
     const contact = await Contact.findById(req.params.contactId);
