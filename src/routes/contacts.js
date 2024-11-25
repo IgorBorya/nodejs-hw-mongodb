@@ -6,7 +6,7 @@ import {
   updateContact,
   deleteContact,
 } from '../controllers/contacts.js';
-import ctrlWrapper from '../utils/ctrlWrapper.js';
+import ctrlWrapper from '../utils/ctrWrapper.js';
 
 const router = express.Router();
 
